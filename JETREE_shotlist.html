@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JETREE — Shot List</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0a0f;
+    color: #d4cfc4;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 40px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    color: #f0ead8;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    color: #5a6070;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    margin-bottom: 40px;
+  }
+  .legend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+    padding: 14px 18px;
+    background: #12121a;
+    border-left: 3px solid #2a2a3a;
+    font-size: 11px;
+  }
+  .legend-item { display: flex; align-items: center; gap: 7px; }
+  .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .mn { background: #2244aa; }
+  .md { background: #227a88; }
+  .su { background: #885522; }
+    .sn { background: #551188; }
+  .zone-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: #444458;
+    text-transform: uppercase;
+    margin: 32px 0 12px;
+    border-bottom: 1px solid #1a1a28;
+    padding-bottom: 6px;
+  }
+  .panel {
+    display: grid;
+    grid-template-columns: 44px 110px 1fr;
+    gap: 0;
+    border-left: 2px solid #1c1c2c;
+    margin-bottom: 3px;
+    transition: background 0.1s;
+  }
+  .panel:hover { background: #0f0f18; }
+  .panel.mn { border-left-color: #2244aa; }
+  .panel.md { border-left-color: #227a88; }
+  .panel.su { border-left-color: #885522; }
+  .panel.sn { border-left-color: #551188; }
+  .panel.rhyme { border-left-style: dashed; }
+  .num {
+    padding: 12px 8px 12px 12px;
+    color: #333348;
+    font-size: 11px;
+    align-self: start;
+    padding-top: 13px;
+  }
+  .loc {
+    padding: 12px 10px;
+    color: #6680aa;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    align-self: start;
+    padding-top: 13px;
+    line-height: 1.4;
+  }
+  .content {
+    padding: 12px 16px 12px 10px;
+    border-left: 1px solid #1a1a28;
+  }
+  .must-show {
+    color: #e8e0cc;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .silent-read {
+    color: #667;
+    font-size: 11px;
+    font-style: italic;
+  }
+  .rhyme-note {
+    font-size: 10px;
+    color: #886644;
+    margin-top: 4px;
+  }
+  .vo-note {
+    font-size: 10px;
+    color: #448866;
+    margin-top: 4px;
+  }
+  .section-break {
+    height: 1px;
+    background: #1a1a28;
+    margin: 24px 0;
+  }
+  .route-header {
+    background: #0d0d18;
+    padding: 10px 18px;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: #334;
+    text-transform: uppercase;
+    margin: 28px 0 4px;
+    border: 1px solid #15152a;
+  }
+  .note-block {
+    background: #0d120d;
+    border-left: 2px solid #334433;
+    padding: 14px 18px;
+    margin: 32px 0;
+    font-size: 11px;
+    color: #556655;
+    line-height: 1.7;
+  }
+  .note-block strong { color: #778877; }
+  footer {
+    margin-top: 60px;
+    font-size: 10px;
+    color: #333344;
+    letter-spacing: 0.1em;
+    border-top: 1px solid #15152a;
+    padding-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>AMBERGRIS — JETREE SHOT LIST</h1>
+<div class="subtitle">silent film panel sequence · La Jetée format · ~30 panels · voice-over agnostic</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="dot mn"></div> MOONNIGHT — alone / before</div>
+  <div class="legend-item"><div class="dot md"></div> MOONDAY — arrival / first meet</div>
+  <div class="legend-item"><div class="dot su"></div> SUNDAY — settled / the dive</div>
+  <div class="legend-item"><div class="dot sn"></div> SUNNIGHT — fire / departure</div>
+  <span style="color:#886644; font-size:11px">╌╌ dashed border = rhymes with earlier panel</span>
+</div>
+
+<div class="note-block">
+  <strong>STRUCTURE NOTE</strong><br>
+  The route is linear but loops. Read left-to-right like a jetty: you walk out over the water (APPROACH), reach the TRUNK, climb up, enter the BRANCHES. The story plays once forward, then the Möbius fold — SUNNIGHT rhymes with MOONNIGHT, the last image rhymes with the first. Panels marked ╌ are deliberate echoes.<br><br>
+  <strong>VOICE-OVER NOTE</strong><br>
+  No VO is written here. The panels are designed so the same images read differently depending on the voice speaking over them. Old male VO = TRAST narrating memory. Young girl VO = O telling the story of how they came to be. Same words, same images, different film.
+</div>
+
+<div class="route-header">① APPROACH — JETTY OVER THE WATER</div>
+
+<div class="panel mn">
+  <div class="num">01</div>
+  <div class="loc">JETTY<br>MOONNIGHT<br>wide</div>
+  <div class="content">
+    <div class="must-show">The JETREE from a distance — at sea. Night. The structure visible: horizontal jetty jutting out over the water, trunk rising from where it meets the platform, branches spreading above. One small bird (I) at the end of the jetty. No ferry.</div>
+    <div class="silent-read">This place exists. Someone is waiting.</div>
+  </div>
+</div>
+
+<div class="panel mn">
+  <div class="num">02</div>
+  <div class="loc">JETTY END<br>MOONNIGHT<br>close</div>
+  <div class="content">
+    <div class="must-show">I's feet on the jetty planks. The sea below between the planks. GULLGANG on the railing — three or four gulls, ignoring I completely. I looks at them. They don't look back.</div>
+    <div class="silent-read">I has been here a long time. The gulls don't acknowledge them. This is established fact.</div>
+  </div>
+</div>
+
+<div class="panel mn">
+  <div class="num">03</div>
+  <div class="loc">JETTY END<br>MOONNIGHT<br>close</div>
+  <div class="content">
+    <div class="must-show">I holds something small — a bottle? A bone? A photograph? We can't quite see. I looks at the sea.</div>
+    <div class="silent-read">I is waiting for someone or something. What I holds is private.</div>
+    <div class="vo-note">VO ambiguity: old male VO = "I remember waiting." / young girl VO = "They always waited."</div>
+  </div>
+</div>
+
+<div class="route-header">② ARRIVAL — THE FERRY DOCKS</div>
+
+<div class="panel md">
+  <div class="num">04</div>
+  <div class="loc">SEA HORIZON<br>MOONDAY<br>wide</div>
+  <div class="content">
+    <div class="must-show">The TWIGFERRY on the horizon, approaching. GULLGANG launches from the jetty railing and spirals upward to circle the incoming ferry — they do this every time. I watches.</div>
+    <div class="silent-read">Something is coming. The gulls know the routine. I is not surprised.</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">05</div>
+  <div class="loc">GANGPLANK<br>MOONDAY<br>mid</div>
+  <div class="content">
+    <div class="must-show">TICKETVULTURE at the gangplank: grey-black, top hat, empty cage beside them. Sign visible: CLEAR PLASTIC BAGS ONLY. The gangplank is down. The ferry is docked.</div>
+    <div class="silent-read">There is a rule here. It is enforced by something large and grey.</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">06</div>
+  <div class="loc">FERRY DECK<br>MOONDAY<br>mid</div>
+  <div class="content">
+    <div class="must-show">TRAST on deck: heavy-chested grey-black bird, orange beak, many large bags, a camera on a strap, a cigarette. Looking at the JETREE. The bags are NOT clear plastic.</div>
+    <div class="silent-read">Someone has arrived carrying everything they own. They were not prepared for the rule.</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">07</div>
+  <div class="loc">GANGPLANK<br>MOONDAY<br>close</div>
+  <div class="content">
+    <div class="must-show">TICKETVULTURE points at TRAST's bags. Points at the sign. Steps sideways to block the gangplank. Does not speak. Does not move.</div>
+    <div class="silent-read">Entry refused. The reason is the sign. There is no appeal.</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">08</div>
+  <div class="loc">GANGPLANK<br>MOONDAY<br>mid</div>
+  <div class="content">
+    <div class="must-show">I moves forward — small, white, trying to help. Sees the CUTTLEFISH BONES in TRAST's outer bag. Kicks them. Hard. The bones bounce off the edge of the gangplank and fall. I looks satisfied. TRAST's face changes.</div>
+    <div class="silent-read">A misreading of the situation. Something irreplaceable is now gone. The helper made it worse.</div>
+    <div class="rhyme-note">rhymes with panel 26 — I helps correctly, at last</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">09</div>
+  <div class="loc">WATER BELOW<br>MOONDAY<br>close</div>
+  <div class="content">
+    <div class="must-show">The bones falling through dark water. Slow. One bounces off a pylon. Disappears into dark. A bubble escapes.</div>
+    <div class="silent-read">What was lost. Where it went.</div>
+    <div class="rhyme-note">rhymes with panel 14 — things falling into water always travel somewhere</div>
+  </div>
+</div>
+
+<div class="route-header">③ PLATFORM — FIRST MEET ON THE JETTY</div>
+
+<div class="panel md">
+  <div class="num">10</div>
+  <div class="loc">JETTY PLATFORM<br>MOONDAY<br>two-shot</div>
+  <div class="content">
+    <div class="must-show">I and TRAST on the platform. Both birds, both still. The bags are somehow here now (bags were left or arrangements made — we don't see this transition). First moment of actual proximity. GULLGANG watching from the railing — still not acknowledging I, but watching TRAST with curiosity.</div>
+    <div class="silent-read">They are in the same place now. The gulls are interested in the newcomer.</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">11</div>
+  <div class="loc">JETTY PLATFORM<br>MOONDAY<br>close</div>
+  <div class="content">
+    <div class="must-show">I's hand reaching toward TRAST's bag — toward a BOTTLE. The gesture is very specific: fingers to the throat, eyes wide. Not reaching to steal. Reaching the way someone reaches for medicine.</div>
+    <div class="silent-read">I recognises what's in the bottle. This is personal.</div>
+    <div class="vo-note">VO ambiguity: same gesture reads as intimacy or intrusion depending on the voice.</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">12</div>
+  <div class="loc">JETTY PLATFORM<br>MOONDAY<br>close</div>
+  <div class="content">
+    <div class="must-show">TRAST pulls the bag back. Opens it — shows the inside: broken glass. The bottle broke in transit. TRAST's expression: embarrassed, not angry. I's expression: the misunderstanding landing.</div>
+    <div class="silent-read">Neither of them is what the other thought. This is how it starts.</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">13</div>
+  <div class="loc">JETTY PLATFORM<br>MOONDAY<br>close</div>
+  <div class="content">
+    <div class="must-show">TRAST reveals the CAMERA: heavy body, fly-eye lens (compound, multiple facets). Unscrews the lens. Holds it toward I. Close-up on the facets — each one reflecting a different angle of the JETREE. I's tiny face in one facet.</div>
+    <div class="silent-read">TRAST carries something that multiplies seeing. I is suddenly interested.</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">14</div>
+  <div class="loc">JETTY PLATFORM<br>MOONDAY<br>close</div>
+  <div class="content">
+    <div class="must-show">I — small enough to fit — flies into the open bottle to look at the fly-lens image inside. TRAST carefully retrieves I. A GULL on the railing turns its head. First flicker of something between I and TRAST.</div>
+    <div class="silent-read">The first moment that is funny. The gull noticed.</div>
+    <div class="rhyme-note">rhymes with panel 09 — things going into small spaces / bottles</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">15</div>
+  <div class="loc">JETTY PLATFORM<br>MOONDAY<br>mid</div>
+  <div class="content">
+    <div class="must-show">GREENWREN arrives — a hummingbird, luminous colours. TRAST looks at GREENWREN. In the next panel or in the same frame split: what TRAST sees = grey static, black-and-white pixels where the colour should be. TRAST turns away.</div>
+    <div class="silent-read">TRAST can see through some things. GREENWREN is not what they appear.</div>
+  </div>
+</div>
+
+<div class="panel md">
+  <div class="num">16</div>
+  <div class="loc">JETTY PLATFORM<br>MOONDAY<br>close</div>
+  <div class="content">
+    <div class="must-show">TRAST wears a MASK — attached to the beak with a cord. Show the cord specifically. This has been there since we first saw TRAST but we focus on it now. The mask has a reason we haven't been shown.</div>
+    <div class="silent-read">Something happened before this story began. The mask is the evidence.</div>
+    <div class="rhyme-note">plant — pays off in panel 27</div>
+  </div>
+</div>
+
+<div class="route-header">④ TIME PASSING — TRUNK CLIMB / DAY 21</div>
+
+<div class="panel su">
+  <div class="num">17</div>
+  <div class="loc">LEFT BRANCH<br>SUNDAY<br>wide</div>
+  <div class="content">
+    <div class="must-show">I on the TWIGBIKE, approaching along the left branch. Carrying a large cloth-wrapped package: VELLUM. The branch is familiar now — I belongs here. STICKINSECT visible at the branch junction, standing very still, watching.</div>
+    <div class="silent-read">Time has passed. I returns now with things, not empty-handed.</div>
+    <div class="rhyme-note">rhymes with panel 02 — same branch, different weight</div>
+  </div>
+</div>
+
+<div class="panel su">
+  <div class="num">18</div>
+  <div class="loc">HOME / BRANCHES<br>SUNDAY<br>mid</div>
+  <div class="content">
+    <div class="must-show">The VELLUM package is opened inside the HOME zone (nestled in the branches — domestic space). FLIES erupt from the package — dozens of them, launching upward. TRAST waves them away, annoyed. Through the window: the wooden TV with its blown-glass bubble, showing empty streets.</div>
+    <div class="silent-read">Something from outside has come inside. The world outside (COVID, empty streets) is present on the screen.</div>
+  </div>
+</div>
+
+<div class="panel su">
+  <div class="num">19</div>
+  <div class="loc">JETTY PLATFORM<br>SUNDAY<br>wide</div>
+  <div class="content">
+    <div class="must-show">DAY 21. Wide shot: I writing with CROWFEET from hat (toe dipped in chemical residue — a makeshift pen). TRAST smoking, photographing the sea. O in a wheelchair/chair on the platform, watching the sea. GULLGANG on rails, preening — relaxed. STICKINSECT in the background at the branch junction.</div>
+    <div class="silent-read">This has become ordinary. Everyone has a place. O is here — has been here. We are only now allowed to see them.</div>
+    <div class="vo-note">VO ambiguity: young girl VO = O knows this scene from the inside.</div>
+  </div>
+</div>
+
+<div class="panel su">
+  <div class="num">20</div>
+  <div class="loc">JETTY PLATFORM<br>SUNDAY<br>two-shot</div>
+  <div class="content">
+    <div class="must-show">I says something to TRAST. Not a reaction. A chosen remark — looking at a FISHGULL below selling SAND to another gull. TRAST responds. Their bodies have opened slightly toward each other. One GULL on the railing gives I a tiny nod. Just one gull. Just one nod.</div>
+    <div class="silent-read">The first real exchange. 21 days to get here. The gull noticed.</div>
+  </div>
+</div>
+
+<div class="route-header">⑤ THE DIVE — RIGHT BRANCH INTO SEA</div>
+
+<div class="panel su">
+  <div class="num">21</div>
+  <div class="loc">RIGHT BRANCH<br>SUNDAY<br>mid</div>
+  <div class="content">
+    <div class="must-show">TRAST gears up: AIRTANKS, DIVEHELMET (emitting test bubbles), bags. Puts out the cigarette on the railing. Reads NOTEPAPER quickly — the words will run off. Steps to the edge. Below: the LADDER descending into the water along the PYLON.</div>
+    <div class="silent-read">Someone is going down. The preparation is careful. What they're looking for is not shown yet.</div>
+  </div>
+</div>
+
+<div class="panel su">
+  <div class="num">22</div>
+  <div class="loc">UNDERWATER<br>SUNDAY<br>vertical</div>
+  <div class="content">
+    <div class="must-show">The descent — vertical panel. Water changes colour downward: pale blue → mid blue → dark blue → near-black. TRAST descending the LADDER along the PYLON. At some depth: CUTTO (cuttlefish) drifting. A TENTACLEHAND reaches out and touches TRAST's WING.</div>
+    <div class="silent-read">Deep water. Contact. Something passes between them — we don't know what yet.</div>
+  </div>
+</div>
+
+<div class="panel su">
+  <div class="num">23</div>
+  <div class="loc">SEAFLOOR<br>SUNDAY<br>close</div>
+  <div class="content">
+    <div class="must-show">TRAST's hand lifting the AMBERGRIS from the sand — pale grey, waxy, irregular. Near it: the tip of a bird skeleton, barely visible in the sand. TRAST holds the AMBERGRIS up. The helmet lamp catches it. Something inside the grey mass — an outline.</div>
+    <div class="silent-read">Found. It was here, in the dark, the whole time.</div>
+    <div class="rhyme-note">the skeleton rhymes with panel 09 (bones in water) — they arrived here</div>
+  </div>
+</div>
+
+<div class="panel su">
+  <div class="num">24</div>
+  <div class="loc">JETTY PLATFORM<br>SUNDAY<br>close</div>
+  <div class="content">
+    <div class="must-show">TRAST surfaces, holds up the AMBERGRIS. I leans over the jetty edge. The AMBERGRIS is held toward the light — inside it, visible now: the shape of an EGG. O leans forward in the chair. O's face: recognition, then the first laugh we've seen from O.</div>
+    <div class="silent-read">O knows what this is. O has always known. O's laugh is not surprise — it's recognition.</div>
+    <div class="vo-note">VO ambiguity: young girl VO = O laughing at themselves. Old male VO = hearing that laugh for the first time.</div>
+  </div>
+</div>
+
+<div class="route-header">⑥ SUNNIGHT — FIRE / DEPARTURE</div>
+
+<div class="panel sn">
+  <div class="num">25</div>
+  <div class="loc">LEFT BRANCH<br>SUNNIGHT<br>close</div>
+  <div class="content">
+    <div class="must-show">I on the left branch, walking (no TWIGBIKE this time). Cellphone in hand. The HOME visible through the branch gap — wooden TV on, news footage. VAPE cloud around I: dense, white, engineered. Above: a glow from the BOATGARDEN level — something is burning.</div>
+    <div class="silent-read">Something has happened. I has been called. The world above is on fire.</div>
+    <div class="rhyme-note">rhymes with panel 02 — same branch, same night, but now everything is different</div>
+  </div>
+</div>
+
+<div class="panel sn">
+  <div class="num">26</div>
+  <div class="loc">JETTY PLATFORM<br>SUNNIGHT<br>wide</div>
+  <div class="content">
+    <div class="must-show">HAWK descends from above — enormous, osprey face, gold eye, filling the frame. GULLGANG scatters in panic, crying, circling. Fire-light from above. I and TRAST and O all on the platform. HAWK speaks to O — we don't read it, but we see O's face: receiving information about their own story.</div>
+    <div class="silent-read">Something that has been watching from above has come down. O is being told something about where they come from.</div>
+  </div>
+</div>
+
+<div class="panel sn">
+  <div class="num">27</div>
+  <div class="loc">JETTY PLATFORM<br>SUNNIGHT<br>close</div>
+  <div class="content">
+    <div class="must-show">TRAST's mask cord breaks in the confusion. The mask falls — slow motion. Falls past O's face. O looks directly at the camera for a fraction of a second. The mask lands on the jetty planks. COMMUTERPIGEONS cycling below stop mid-wheel, looking up in fear. O laughs again.</div>
+    <div class="silent-read">The thing TRAST has been wearing since the beginning is gone. O is not afraid. O knew what was under it.</div>
+    <div class="rhyme-note">pays off panel 16 — the cord planted in MOONDAY</div>
+    <div class="vo-note">O looking at camera: breaks the fourth wall once, here only.</div>
+  </div>
+</div>
+
+<div class="panel sn">
+  <div class="num">28</div>
+  <div class="loc">GANGPLANK<br>SUNNIGHT<br>wide</div>
+  <div class="content">
+    <div class="must-show">GULLGANG — all of them — converge on O's chair and lift it. Many beaks, many wings. The chair rises. I and TRAST walk alongside. TICKETVULTURE stands at the gangplank. Steps aside. Does not check bags. Just — steps aside. The TWIGFERRY is waiting.</div>
+    <div class="silent-read">The thing that was always refused is now given. The gulls who never acknowledged now carry. This is the end of something.</div>
+    <div class="rhyme-note">rhymes with panel 07 — same gangplank, same TICKETVULTURE, reversed</div>
+  </div>
+</div>
+
+<div class="route-header">⑦ CODA — DARKROOM / FINAL IMAGE</div>
+
+<div class="panel sn">
+  <div class="num">29</div>
+  <div class="loc">DARKROOM / BRANCHES<br>SUNNIGHT<br>close</div>
+  <div class="content">
+    <div class="must-show">TRAST alone in the DARKROOM (inside the branch structure). Rows of empty bottles above chemical trays that sparkle in the dark. On a shelf: a cage. The lock is open. The cage is empty. TRAST develops an image in a tray — an image from MOONNIGHT, from before. It resolves in the liquid: the jetty, someone waiting.</div>
+    <div class="silent-read">What TRAST kept. What the darkroom holds: all the images that have already happened. The cage is open. Whatever was in it has left.</div>
+  </div>
+</div>
+
+<div class="panel sn rhyme">
+  <div class="num">30</div>
+  <div class="loc">SEA / WIDE<br>SUNNIGHT<br>wide</div>
+  <div class="content">
+    <div class="must-show">The JETREE from the sea, at distance. Night. Same composition as panel 01. The structure: horizontal jetty, trunk, branches. No one on the jetty now. Then: B&amp;W mode — VIABRO threads visible everywhere, green, connecting every node. The JETREE is lit from within.</div>
+    <div class="silent-read">The place remains. What passed through it remains, invisible except in the right light.</div>
+    <div class="rhyme-note">direct Möbius echo of panel 01 — same shot, 29 panels later, the place transformed by what happened inside it</div>
+    <div class="vo-note">"Wings could get you ambergris. Corpse won't get you ambergris."</div>
+  </div>
+</div>
+
+<div class="section-break"></div>
+
+<div class="note-block">
+  <strong>PANEL COUNT:</strong> 30 panels total. Approx 28 min at 1 panel per 56 sec (La Jetée pace) or 2 min at mobile-game pace.<br><br>
+  <strong>SILENT GRAMMAR RULES:</strong><br>
+  — No text cards. No speech bubbles. Everything via gesture, eyeline, and proximity.<br>
+  — What a character holds = what they value. What falls = what is lost.<br>
+  — Eyeline tells the relationship: who looks at whom, who looks away.<br>
+  — The GULL nod in panel 20 = the emotional climax of the first half.<br>
+  — O's laugh in panel 24 = the emotional climax of the second half.<br>
+  — O looking at the camera in panel 27 = the only fourth-wall break in the film.<br><br>
+  <strong>VIABRO / B&amp;W MODE:</strong><br>
+  In panels 01 and 30 (the Möbius pair), B&amp;W mode reveals the VIABRO threads. In all other panels, VIABRO is invisible in colour mode. The audience only sees the full picture if they switch modes — or if they watch the film twice and recognise what was always there.
+</div>
+
+<footer>
+  AMBERGRIS — jetree shotlist v1 · generated from JETREE_scenes.md · La Jetée / Sans Soleil homage · MDA Australia fundraiser · Bjorn's MDAi SMART goal
+</footer>
+
+</body>
+</html>

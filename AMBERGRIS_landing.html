@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>AMBERGRIS</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#020208;color:#d4cfc4;font-family:'Courier New',monospace;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+
+/* PASSWORD SCREEN */
+#lock{position:fixed;inset:0;background:#020208;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;z-index:100;transition:opacity 0.8s;}
+#lock.hide{opacity:0;pointer-events:none;}
+.lock-title{font-size:28px;letter-spacing:0.35em;color:#d4cfc4;text-transform:uppercase;}
+.lock-sub{font-size:11px;letter-spacing:0.2em;color:#333348;}
+.lock-form{display:flex;flex-direction:column;align-items:center;gap:14px;}
+.lock-input{background:transparent;border:none;border-bottom:1px solid #2a2a3a;color:#d4cfc4;font-family:'Courier New',monospace;font-size:16px;text-align:center;padding:10px 20px;width:220px;letter-spacing:0.15em;outline:none;}
+.lock-input:focus{border-bottom-color:#5555aa;}
+.lock-input::placeholder{color:#222238;letter-spacing:0.1em;}
+.lock-btn{background:transparent;border:1px solid #2a2a3a;color:#888899;font-family:'Courier New',monospace;font-size:12px;letter-spacing:0.2em;padding:10px 32px;cursor:pointer;text-transform:uppercase;transition:all 0.2s;}
+.lock-btn:hover{border-color:#5555aa;color:#aaaacc;}
+.lock-err{font-size:11px;color:#aa3333;letter-spacing:0.1em;height:16px;}
+.lock-stars{position:fixed;inset:0;pointer-events:none;}
+
+/* MAIN CONTENT */
+#main{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:40px 20px;gap:40px;max-width:420px;margin:0 auto;}
+#main.show{display:flex;}
+
+.m-title{font-size:32px;letter-spacing:0.4em;color:#d4cfc4;text-transform:uppercase;text-align:center;}
+.m-sub{font-size:11px;letter-spacing:0.2em;color:#333348;text-align:center;line-height:2;}
+
+/* VIABRO threads decoration */
+.threads{width:100%;height:2px;background:transparent;position:relative;overflow:visible;}
+.threads::before{content:'';position:absolute;left:10%;right:10%;top:0;height:1px;background:#00ff66;opacity:0.15;}
+
+/* PLAY BUTTON */
+.play-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;}
+.play-btn{width:88px;height:88px;border-radius:50%;border:1px solid #3a3a5a;background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s;position:relative;}
+.play-btn:hover{border-color:#7777aa;box-shadow:0 0 30px rgba(100,100,200,0.15);}
+.play-btn::after{content:'▶';font-size:28px;color:#d4cfc4;margin-left:4px;}
+.play-label{font-size:10px;letter-spacing:0.25em;color:#444456;text-transform:uppercase;}
+
+/* TEASER embed */
+#teaser-wrap{display:none;width:100%;max-width:380px;}
+#teaser-wrap.show{display:block;}
+#teaser-frame{width:100%;border:none;border-radius:4px;}
+
+/* DOGE BUTTON */
+.doge-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;}
+.doge-btn{background:transparent;border:1px solid #2a2518;color:#886633;font-family:'Courier New',monospace;font-size:14px;letter-spacing:0.15em;padding:14px 32px;cursor:pointer;transition:all 0.3s;border-radius:2px;display:flex;align-items:center;gap:10px;}
+.doge-btn:hover{border-color:#aa8844;color:#ccaa66;box-shadow:0 0 20px rgba(180,140,60,0.1);}
+.doge-symbol{font-size:22px;}
+.doge-label{font-size:10px;letter-spacing:0.2em;color:#443322;text-transform:uppercase;text-align:center;}
+
+/* THANKS POPUP */
+#thanks{position:fixed;bottom:40px;left:50%;transform:translateX(-50%);background:#0a0a08;border:1px solid #886633;padding:16px 28px;font-size:13px;letter-spacing:0.1em;color:#ccaa66;border-radius:2px;opacity:0;transition:opacity 0.4s;pointer-events:none;text-align:center;white-space:nowrap;}
+#thanks.show{opacity:1;}
+
+/* FOOTER */
+.footer{font-size:10px;color:#1a1a28;letter-spacing:0.15em;text-align:center;line-height:2;}
+</style>
+</head>
+<body>
+
+<!-- Stars canvas behind everything -->
+<canvas class="lock-stars" id="starfield"></canvas>
+
+<!-- PASSWORD SCREEN -->
+<div id="lock">
+  <div class="lock-title">AMBERGRIS</div>
+  <div class="lock-sub">PRIVATE PREVIEW · ENTER PASSWORD</div>
+  <div class="lock-form">
+    <input class="lock-input" id="pw" type="password" placeholder="· · · · · · · · · ·" autocomplete="off" autocorrect="off" spellcheck="false">
+    <button class="lock-btn" onclick="checkPW()">ENTER</button>
+    <div class="lock-err" id="err"></div>
+  </div>
+  <div style="font-size:10px;color:#1a1a28;letter-spacing:0.12em;">iambergris.com</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main">
+
+  <div class="m-title">AMBERGRIS</div>
+  <div class="m-sub">
+    a film · a game · a world<br>
+    from Bjorn's drawings
+  </div>
+
+  <div class="threads"></div>
+
+  <!-- PLAY BUTTON -->
+  <div class="play-wrap">
+    <button class="play-btn" onclick="toggleTeaser()" id="playBtn" aria-label="Play teaser"></button>
+    <div class="play-label">WATCH THE TEASER</div>
+  </div>
+
+  <!-- TEASER EMBED -->
+  <div id="teaser-wrap">
+    <iframe id="teaser-frame" src="AMBERGRIS_teaser.html" scrolling="no" title="AMBERGRIS teaser animation"></iframe>
+  </div>
+
+  <div class="threads"></div>
+
+  <!-- DOGE BUTTON -->
+  <div class="doge-wrap">
+    <button class="doge-btn" onclick="dogePress()">
+      <span class="doge-symbol">Ð</span>
+      <span>SUPPORT WITH DOGE</span>
+    </button>
+    <div class="doge-label">every coin helps · much wow</div>
+  </div>
+
+  <div class="footer">
+    MDA Australia · MDAi creative program · Hobart<br>
+    made with Bjorn · iambergris.com
+  </div>
+
+</div>
+
+<!-- THANKS POPUP -->
+<div id="thanks">✦ THANKS FOR YOUR GENEROUS GIFT ✦<br><span style="font-size:10px;color:#886633;">much wow · very doge · so ambergris</span></div>
+
+<script>
+// PASSWORD — change this to whatever you like
+const PASSWORD = 'iambergris';
+
+// Starfield
+const sc = document.getElementById('starfield');
+const sctx = sc.getContext('2d');
+function drawStars(){
+  sc.width = window.innerWidth;
+  sc.height = window.innerHeight;
+  sctx.fillStyle = '#ffffff';
+  for(let i=0;i<120;i++){
+    const x=(i*137.5*sc.width)%sc.width;
+    const y=(i*93.7*sc.height)%sc.height;
+    sctx.globalAlpha = 0.1 + (i%8)*0.04;
+    sctx.beginPath();sctx.arc(x,y,i%5===0?1.2:0.5,0,Math.PI*2);sctx.fill();
+  }
+  sctx.globalAlpha=1;
+}
+drawStars();
+window.addEventListener('resize',drawStars);
+
+// Password check
+function checkPW(){
+  const val = document.getElementById('pw').value.trim().toLowerCase();
+  if(val === PASSWORD.toLowerCase()){
+    const lock = document.getElementById('lock');
+    lock.classList.add('hide');
+    setTimeout(()=>{
+      lock.style.display='none';
+      document.getElementById('main').classList.add('show');
+    },800);
+  } else {
+    const err = document.getElementById('err');
+    err.textContent = 'try again';
+    document.getElementById('pw').value='';
+    setTimeout(()=>err.textContent='',2000);
+  }
+}
+document.getElementById('pw').addEventListener('keydown',e=>{if(e.key==='Enter')checkPW();});
+
+// Play teaser toggle
+let teaserOpen = false;
+function toggleTeaser(){
+  const wrap = document.getElementById('teaser-wrap');
+  const frame = document.getElementById('teaser-frame');
+  const btn = document.getElementById('playBtn');
+  teaserOpen = !teaserOpen;
+  if(teaserOpen){
+    wrap.classList.add('show');
+    // Set iframe height proportional to width
+    const w = wrap.offsetWidth;
+    frame.style.height = Math.round(w * 560/380) + 'px';
+    btn.style.borderColor='#7777aa';
+    btn.style.setProperty('--play-content','▮▮');
+    btn.setAttribute('data-pause','1');
+    btn.style.cssText += ';border-color:#7777aa;';
+  } else {
+    wrap.classList.remove('show');
+    btn.style.borderColor='#3a3a5a';
+  }
+}
+
+// Doge button
+let dogeCount = 0;
+const dogeMessages = [
+  '✦ THANKS FOR YOUR GENEROUS GIFT ✦',
+  '✦ YOU ARE VERY GENEROUS ✦',
+  '✦ MUCH WOW · MANY THANKS ✦',
+  '✦ BJORN SAYS THANK YOU ✦',
+  '✦ THE WHALE THANKS YOU ✦',
+  '✦ VERY DOGE · MUCH AMBERGRIS ✦',
+];
+function dogePress(){
+  dogeCount++;
+  const msg = dogeMessages[dogeCount % dogeMessages.length];
+  const el = document.getElementById('thanks');
+  el.querySelector('span:first-child') ? null : null;
+  el.innerHTML = msg + '<br><span style="font-size:10px;color:#886633;">gift #'+dogeCount+' received · much wow</span>';
+  el.classList.add('show');
+  clearTimeout(window._dogeTimer);
+  window._dogeTimer = setTimeout(()=>el.classList.remove('show'),3000);
+}
+</script>
+</body>
+</html>

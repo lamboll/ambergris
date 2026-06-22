@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMBERGRIS — Drawing Checklist</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#080810;color:#d4cfc4;font-family:'Courier New',monospace;padding:32px 20px;max-width:640px;margin:0 auto;line-height:1.6;}
+h1{font-size:20px;letter-spacing:0.35em;color:#d4cfc4;margin-bottom:6px;}
+.tagline{font-size:11px;color:#333348;letter-spacing:0.2em;margin-bottom:36px;}
+h2{font-size:12px;letter-spacing:0.3em;color:#444460;text-transform:uppercase;margin:32px 0 14px;border-bottom:1px solid #14141e;padding-bottom:8px;}
+.item{display:flex;align-items:flex-start;gap:14px;padding:10px 0;border-bottom:1px solid #0e0e16;}
+.item:last-child{border-bottom:none;}
+.tick{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:2px;}
+.done .tick{background:#0d1a0d;border:1px solid #226622;color:#00cc44;}
+.needed .tick{background:#0a0a18;border:1px solid #2a2a44;color:#333348;}
+.needed .tick::after{content:'?';}
+.info{flex:1;}
+.name{font-size:14px;color:#d4cfc4;font-weight:bold;margin-bottom:3px;}
+.done .name{color:#88cc88;}
+.needed .name{color:#8888aa;}
+.desc{font-size:11px;color:#444458;line-height:1.6;}
+.source{font-size:10px;color:#226622;margin-top:3px;}
+.note{font-size:10px;color:#664422;margin-top:3px;}
+.badge-done{display:inline-block;font-size:9px;letter-spacing:0.15em;background:#0d1a0d;border:1px solid #226622;color:#44aa44;padding:2px 8px;border-radius:2px;margin-top:4px;}
+.badge-need{display:inline-block;font-size:9px;letter-spacing:0.15em;background:#0a0818;border:1px solid #332244;color:#6655aa;padding:2px 8px;border-radius:2px;margin-top:4px;}
+
+.section-intro{font-size:11px;color:#2a2a3a;margin-bottom:8px;line-height:1.7;}
+.progress{font-size:11px;color:#226622;margin:8px 0 24px;letter-spacing:0.1em;}
+</style>
+</head>
+<body>
+
+<h1>AMBERGRIS</h1>
+<div class="tagline">DRAWING CHECKLIST — every character · every prop · every place</div>
+
+<div class="progress" id="prog"></div>
+
+<!-- CHARACTERS -->
+<h2>Characters — the cast</h2>
+<div class="section-intro">These are all the characters in AMBERGRIS. The ones with a green ✓ already have a drawing from Bjorn. The ones with ? still need to be drawn!</div>
+
+<div class="item done">
+  <div class="tick">✓</div>
+  <div class="info">
+    <div class="name">I / FINK</div>
+    <div class="desc">Small white bird. Orange beak. Orange feet. Wears a hat with crowfeet. Tiny — fits inside a bottle. Rides the TWIGBIKE. Writes with their foot as a pen.</div>
+    <div class="source">📷 found in: IMG_1108 (white bird painting), IMG_0085 (circular painting)</div>
+    <span class="badge-done">✓ DRAWN</span>
+  </div>
+</div>
+
+<div class="item done">
+  <div class="tick">✓</div>
+  <div class="info">
+    <div class="name">TRAST / A</div>
+    <div class="desc">Bigger black bird. Heavy chest. Yellow-orange beak. Carries lots of bags. Has a camera with a fly-eye lens. Wears a mask (attached by a cord to beak). Smokes — later uses a vape. Dives underwater with airtanks.</div>
+    <div class="source">📷 found in: IMG_0085 (circular painting — small black bird), IMG_0086 (gold glitter bird in flight)</div>
+    <span class="badge-done">✓ DRAWN</span>
+  </div>
+</div>
+
+<div class="item done">
+  <div class="tick">✓</div>
+  <div class="info">
+    <div class="name">O / SON</div>
+    <div class="desc">The child. Born from an egg inside AMBERGRIS. As a baby — a tiny chick, gold and silver. As a child — in a wheelchair/chair. Always watching. Always knowing more than they let on. Laughs at exactly the right moment.</div>
+    <div class="source">📷 found as baby/chick: IMG_3150 (small yellow creature)</div>
+    <div class="note">⚠️ O as an older child in the wheelchair still needs to be drawn</div>
+    <span class="badge-done">✓ BABY DRAWN</span>
+    <span class="badge-need">? OLDER VERSION NEEDED</span>
+  </div>
+</div>
+
+<div class="item done">
+  <div class="tick">✓</div>
+  <div class="info">
+    <div class="name">MAMMA / WHALE</div>
+    <div class="desc">Enormous sperm whale. Grey. Moves through the deep sea like a slow shadow. Her blowhole makes giant bubbles. She is the one who left the AMBERGRIS behind. OctiMom's companion.</div>
+    <div class="source">📷 found in: IMG_3143 (Bjorn's pencil drawing with cuttlefish), IMG_0005 (ocean mural — humpback)</div>
+    <span class="badge-done">✓ DRAWN</span>
+  </div>
+</div>
+
+<div class="item done">
+  <div class="tick">✓</div>
+  <div class="info">
+    <div class="name">CUTTO / CUTTLEFISH</div>
+    <div class="desc">A cuttlefish. Skin flashes with pixel letters — it writes in colour on its own body. Has many tentacle-hands. One tentacle touches TRAST underwater and passes VIABRO. Lives in the ChillOutZone under the jetty.</div>
+    <div class="source">📷 found in: IMG_3143 (with whale), IMG_0004 (ocean mural — beautifully painted cuttlefish)</div>
+    <span class="badge-done">✓ DRAWN</span>
+  </div>
+</div>
+
+<div class="item done">
+  <div class="tick">✓</div>
+  <div class="info">
+    <div class="name">STICKINSECT</div>
+    <div class="desc">A praying mantis / stick insect. Lives at the branch junction of the JETREE — the threshold between the tree and the HOME. Has compound eyes that see double when VIABRO is nearby. Reaches imago (adult winged) stage during the story — transforms into something new.</div>
+    <div class="source">📷 found in: IMG_3146 (clear pencil sketch on cardboard)</div>
+    <span class="badge-done">✓ DRAWN</span>
+  </div>
+</div>
+
+<div class="item done">
+  <div class="tick">✓</div>
+  <div class="info">
+    <div class="name">DRAGONFLY</div>
+    <div class="desc">Was kept in a cage by SB. By SUNNIGHT — the cage is open and the dragonfly is gone. Nobody knows where it went. Earlier name was CAGEBIRD. Four wings. Big compound eyes. Fast.</div>
+    <div class="source">📷 found in: IMG_3147 (two graph paper sketches — great reference)</div>
+    <span class="badge-done">✓ DRAWN</span>
+  </div>
+</div>
+
+<div class="item done">
+  <div class="tick">✓</div>
+  <div class="info">
+    <div class="name">GULLGANG</div>
+    <div class="desc">A gang of seagulls who hang out on the jetty railing. At first they completely ignore I. Slowly warm up. By the end — carry O's wheelchair across the gangplank together. There are 4–6 of them.</div>
+    <div class="source">📷 found in: IMG_3145 (three bold black birds in flight — painted canvas, perfect)</div>
+    <span class="badge-done">✓ DRAWN</span>
+  </div>
+</div>
+
+<div class="item done">
+  <div class="tick">✓</div>
+  <div class="info">
+    <div class="name">GREENWREN</div>
+    <div class="desc">A hummingbird. Very bright colours — luminous, almost glowing. Friend/colleague of I. But TRAST looks at GREENWREN and sees only grey static pixels — TRAST can see that GREENWREN is not what they appear to be.</div>
+    <div class="source">📷 found in: IMG_0085 (the red+blue bird in the circular painting could be GREENWREN — or I/FINK with different colours)</div>
+    <div class="note">⚠️ Needs a dedicated drawing showing both the real colourful version AND the grey static version (what TRAST sees)</div>
+    <span class="badge-done">✓ COLOUR REF EXISTS</span>
+    <span class="badge-need">? STATIC VERSION NEEDED</span>
+  </div>
+</div>
+
+<div class="item needed">
+  <div class="tick"></div>
+  <div class="info">
+    <div class="name">TICKETVULTURE</div>
+    <div class="desc">A large dark vulture. Wears a top hat. Always carries a small empty cage beside them (we never find out what was in it). Stands at the GANGPLANK and checks bags. Has a rule: CLEAR BAGS ONLY. Never explains. Never changes the rule. Until the very end — when they step aside.</div>
+    <div class="note">Key prop: the empty cage + the top hat. Both must be in the drawing.</div>
+    <span class="badge-need">? NEEDS DRAWING</span>
+  </div>
+</div>
+
+<div class="item needed">
+  <div class="tick"></div>
+  <div class="info">
+    <div class="name">HAWK</div>
+    <div class="desc">An enormous osprey. Gold eye. Lives up in the BOATGARDEN — the very top of the world. Comes down only in SUNNIGHT when the fire starts. Much larger than any other bird character. Fills the whole panel when they appear. Has been watching the whole story from above.</div>
+    <div class="note">Must show the gold eye. Must show scale — HAWK should look 3× bigger than TRAST.</div>
+    <span class="badge-need">? NEEDS DRAWING</span>
+  </div>
+</div>
+
+<div class="item needed">
+  <div class="tick"></div>
+  <div class="info">
+    <div class="name">COMMUTERPIGEONS</div>
+    <div class="desc">Pigeons who cycle past on the esplanade below the jetty. Always on bikes. Always looking up. Three of them. In SUNNIGHT they see TRAST's face when the mask falls off — and stop dead on their bikes, frozen in fear.</div>
+    <div class="note">The bikes are part of who they are. Imagine pigeons wearing cycling gear, riding old-fashioned bicycles.</div>
+    <span class="badge-need">? NEEDS DRAWING</span>
+  </div>
+</div>
+
+<div class="item needed">
+  <div class="tick"></div>
+  <div class="info">
+    <div class="name">FISHGULL</div>
+    <div class="desc">A gull who sells sand on the jetty below. Sand → glass → bottles. Small trader. Not part of the main GULLGANG. Has a little stall or cart.</div>
+    <div class="note">Can be based on the GULLGANG painting but with a small cart or bag of sand.</div>
+    <span class="badge-need">? NEEDS DRAWING</span>
+  </div>
+</div>
+
+<div class="item needed">
+  <div class="tick"></div>
+  <div class="info">
+    <div class="name">SB / THE ABSENT ONE</div>
+    <div class="desc">The one who is gone. I's partner — O's other parent. Died before the main story. We never see SB directly — only their traces: an empty darkroom, a cage, a housecamera on the BOATGARDEN, old photographs in the chemical trays.</div>
+    <div class="note">Idea: draw SB only as a silhouette, or as a shadow on a wall. Or as a blurry photograph that never quite resolves. Deliberately incomplete.</div>
+    <span class="badge-need">? SHADOW / TRACE ONLY</span>
+  </div>
+</div>
+
+<div class="item needed">
+  <div class="tick"></div>
+  <div class="info">
+    <div class="name">VIABRO</div>
+    <div class="desc">Not quite a character — more like a force or a spirit. Born from a dead bird skeleton on the seafloor. Travels through: bone → glass → paper → digital pixels → vape cloud → open air. In B&W mode: appears as GREEN threads and sparks connecting everything in the world. In colour mode: invisible.</div>
+    <div class="note">Could be drawn as green threads/sparks on a black page. Or as tiny glowing particles. Or as the word VIABRO itself made of green dots.</div>
+    <span class="badge-need">? NEEDS DRAWING</span>
+  </div>
+</div>
+
+<!-- LATER STORY CHARACTERS -->
+<h2>Later story characters — after the JETREE</h2>
+<div class="section-intro">These characters appear in the LAMB / BEAR / GRISPIG part of the story. The JETREE level needs to be finished first, but these will need drawings eventually.</div>
+
+<div class="item needed">
+  <div class="tick"></div>
+  <div class="info">
+    <div class="name">LAMB</div>
+    <div class="desc">Part of the later LAMBERGRIS story. Details to come.</div>
+    <span class="badge-need">? LATER</span>
+  </div>
+</div>
+<div class="item needed">
+  <div class="tick"></div>
+  <div class="info">
+    <div class="name">BEAR</div>
+    <div class="desc">Part of the later LAMBERGRIS story. Details to come.</div>
+    <span class="badge-need">? LATER</span>
+  </div>
+</div>
+<div class="item needed">
+  <div class="tick"></div>
+  <div class="info">
+    <div class="name">GRISPIG</div>
+    <div class="desc">Part of the later LAMBERGRIS story. Details to come.</div>
+    <span class="badge-need">? LATER</span>
+  </div>
+</div>
+
+<!-- OBJECTS / PROPS -->
+<h2>Objects + props</h2>
+
+<div class="item done"><div class="tick">✓</div><div class="info"><div class="name">AMBERGRIS</div><div class="desc">Grey, waxy, irregular lump. About the size of a head. Smells of the deep sea. Has an egg shape hidden inside — only visible when held up to light. Feels heavy.</div><div class="source">📷 reference: the grey waxy blob in several notes</div><span class="badge-done">✓ REF EXISTS</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">TWIGBIKE</div><div class="desc">I's bicycle made of twigs. Folds up: all the spokes hinge onto the central stem until it compresses into a small bundle I can tuck under one wing. When unfolded it looks like a real bike but organic.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">TWIGFERRY</div><div class="desc">The ferry that brings TRAST. Made of woven twigs and wood. Has a small cabin and a funnel. Docks at the GANGPLANK.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">FLY-EYE CAMERA</div><div class="desc">TRAST's camera. The lens is a compound insect eye — scraped off a real fly. Multiple tiny facets, each capturing a different angle. Heavy body. TRAST places images on a chemical-coated leaf to develop them.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">WOODEN TV WITH GLASS BUBBLE</div><div class="desc">The TV in the HOME (inside the tree branches). Made of dark wood. The screen is a blown glass bubble. Shows news, COVID footage, space launches. The same newsreader is on it in every time period — never ages.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">AIRTANKS + DIVEHELMET</div><div class="desc">TRAST's diving gear. The helmet makes bubbles every time TRAST breathes out. The tanks are strapped to TRAST's back. There's a tube-chord connecting tank to helmet.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">THE BOTTLE</div><div class="desc">TRAST carries a bottle. I reaches for it with a specific gesture — touching it to the throat — because it contains medicine drops for breathing. The bottle broke in transit on MOONDAY (broken glass inside the bag). TRAST has another at home.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">THE MASK</div><div class="desc">Attached to TRAST's beak by a cord. Required by TICKETVULTURE's rule after an attack. In SUNNIGHT the cord breaks and the mask falls off in slow motion — we never clearly see TRAST's face, but the COMMUTERPIGEONS stop in fear.</div><div class="note">The cord is the most important part — without the cord detail, the SUNNIGHT payoff doesn't work.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">O'S WHEELCHAIR/CHAIR</div><div class="desc">O sits in this on the jetty platform. By SUNNIGHT the GULLGANG carry it across the gangplank together. Needs to look like it could float when lifted by birds.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<!-- LOCATIONS -->
+<h2>Locations + places</h2>
+
+<div class="item done"><div class="tick">✓</div><div class="info"><div class="name">THE JETREE</div><div class="desc">The tree-jetty structure at the centre of the story. Shape: Algiz rune (ᛉ) — a trunk with two branches going up, and a horizontal jetty extending sideways. The trunk goes both up (into branches) and down (into the sea). The whole world is built around it.</div><div class="source">📷 structure diagrams in notes</div><span class="badge-done">✓ STRUCTURE DRAWN</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">THE GANGPLANK</div><div class="desc">The sloped walkway from the ferry to the jetty. This is where TICKETVULTURE stands. This is where the bones fell. This is where GULLGANG carry O at the end. Very important location.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">THE DARKROOM</div><div class="desc">Inside the HOME zone (nested in the tree branches). Rows of empty bottles on shelves above chemical trays that sparkle in the dark. Smells of chemicals and time. This is where TRAST develops photographs — and where the empty DRAGONFLY cage sits on a shelf.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">THE BOATGARDEN</div><div class="desc">The flat roof at the very top of the world. A garden on a boat deck. In SUNNIGHT it catches fire. HAWK lives up here. Has a HOUSECAMERA that SB installed.</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<div class="item needed"><div class="tick"></div><div class="info"><div class="name">THE SEAFLOOR</div><div class="desc">Deepest level — PITCHBLACK. A bird skeleton half-buried in sand. AMBERGRIS nearby. VIABRO sparks around the skeleton. This is where everything begins.</div><div class="source">📷 reference: bird skeleton photo in reference folder</div><span class="badge-need">? NEEDS DRAWING</span></div></div>
+
+<script>
+// Count and show progress
+const done = document.querySelectorAll('.item.done').length;
+const total = document.querySelectorAll('.item').length;
+const needed = document.querySelectorAll('.item.needed').length;
+document.getElementById('prog').textContent =
+  '✓ ' + done + ' items ready · ' + needed + ' still to draw · ' + total + ' total';
+</script>
+</body>
+</html>
